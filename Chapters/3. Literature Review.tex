@@ -1,0 +1,98 @@
+\section{Literature Review}
+    \subsection{General Work}
+        Casper Solheim Bojer. (2022) “Understanding machine learning-based forecasting methods: A decomposition framework and research opportunities”\cite{bojer}. The research paper titled "Understanding machine learning-based forecasting methods: A decomposition framework and research opportunities" by C.S. Bojer offers insights into the growing interest in machine learning-based forecasting methods. It highlights their successful applications in forecasting competitions like the M4, M5, and Kaggle, challenging traditional statistical methods. The paper underscores the need for a systematic understanding of these methods due to their complexity, with diverse components including preprocessing, feature engineering, and ensembling. It introduces a framework for regression-based machine learning forecasting, aiming to standardize terminology and abstraction for researchers. The framework is applied to map and compare winning solutions from the M5 Uncertainty competition, emphasizing the complexity of strategies employed. Additionally, the paper identifies research areas such as cross-learning, feature engineering, and cross-validation, signaling potential advancements in the field of machine learning-based forecasting.
+        
+        Gianluca Bontempi , Souhaib Ben Taieb, and Yann-A¨el Le Borgne (2013) “Machine Learning Strategies for Time Series Forecasting”. [2] The research paper titled "Machine Learning Strategies for Time Series Forecasting" authored by Gianluca Bontempi, Souhaib Ben Taieb, and Yann-Aël Le Borgne provides a comprehensive overview of the role of machine learning techniques in the field of time series forecasting. The paper addresses the growing demand for accurate forecasting across various domains and the transition from traditional linear statistical methods, such as ARIMA models, to machine learning models. It highlights the importance of formalizing one-step forecasting problems as supervised learning tasks and discusses the use of local learning techniques for handling temporal data. The paper explores various strategies for multi-step forecasting, including the Recursive, Direct, and Multiple Output (MIMO) strategies, each with its advantages and limitations. Additionally, the paper introduces the concept of the DIRMO strategy, which combines elements of both Direct and MIMO strategies, providing a flexible approach to multi-step forecasting. The authors also delve into the use of local learning techniques for improving long-term predictions within these strategies.
+        
+        Yitong Li, Kai Wu, Jing Liu (2023) “Self-paced ARIMA for robust time series prediction”.[3] The  ARIMA (autoregressive integrated moving average ) model is a widely respected and traditional linear model for time series prediction, known for its effectiveness in various domains. However, its vulnerability to noisy data, leading to instability and reduced performance, has not received sufficient attention. In this study, we introduce the spARIMA framework to enhance the reliability of time series prediction. We implement a sequential training approach in batches, taking into account noise levels and their impact on accurate modeling, with the goal of minimizing noise-related disruptions during training. To leverage the advantages of self-paced learning (SPL), spARIMA integrates a differential prediction model into the ARIMA framework.
+        
+        Ahmed Tealab, Hesham Hefny, Amr Badr (2017) “Forecasting of nonlinear time series using ANN”. [4] Since basic linear time series models often fall short in fully explaining certain aspects of economic and financial data, it becomes crucial to categorize time series based on their linearity characteristics when conducting forecasts. This approach ensures that linear time series continue to be the focal point of both academic and practical research. Predicting nonlinear time series, especially those containing inherent moving average components, using computational intelligence methods like neural networks can be challenging, given that real-world time series often exhibit dynamic behavior, autoregressive elements, and inherited moving average terms. Research focusing on the prediction of nonlinear time series with moving average components is relatively rare. In this study, we demonstrate that conventional neural networks struggle to effectively capture the behavior of nonlinear time series with moving average terms, resulting in subpar forecasting performance.
+        
+        Hanyu Yang a, Xutao Li a, Wenhao Qiang a, Yuhan Zhao a, Wei Zhang b, Chang Tang c (2021) “A network traffic forecasting method based on SA optimized ARIMA–BP neural network”.[5]It explores the domain of network traffic forecasting, emphasizing the challenges faced by traditional linear and non-linear models. The proposed method integrates Simulated Annealing (SA)-optimized AutoRegressive Integrated Moving Average (ARIMA) with Back Propagation Neural Network (BPNN) to enhance prediction accuracy. The research highlights the contribution of the approach in extracting both linear and non-linear features from network traffic data, addressing limitations in existing models. Notable advances include improved network congestion control mechanisms and enhanced accuracy in fields relying on precise network traffic predictions. Real-world datasets validate the superiority of the proposed method, showcasing its effectiveness against single and hybrid prediction models. The study also conducts sensitivity analysis, demonstrating the method's stability across varying temporal spans. Future directions involve considering user behavior impact, exploring additional factors, and applying the method in Software-Defined Networking (SDN) systems for automated adjustments based on predicted trends. In conclusion, the proposed SA-optimized ARIMA–BPNN method proves promising for various applications, offering superior accuracy in network traffic forecasting and addressing non-linear complexities.
+        
+        Jennifer L. Castle , Michael P. Clements, David F. Hendry (2014).“Robust approaches to forecasting ”.[6] The paper investigates robust approaches to forecasting, particularly focusing on a new class of robust devices in contrast to equilibrium-correction models. The authors explore the forecasting properties of these robust methods in the face of empirical challenges such as measurement errors, impulses, omitted variables, unanticipated location shifts, and incorrectly included variables. The study applies these robust approaches to forecast US GDP using autoregressive models and models with factors extracted from a large dataset of macroeconomic variables. The empirical analysis spans both the Great Recession and an earlier, more stable period, providing insights into the performance of robust forecasting devices under different economic conditions. The authors compare the proposed robust devices with traditional models like autoregression and factor models, evaluating their effectiveness in mitigating forecast failures caused by shifts in the economic environment. The results suggest that the robust devices, especially those with smoothing techniques, show promise in improving forecast accuracy, particularly in the face of significant economic shifts. The empirical findings contribute to the understanding of robust forecasting methods, emphasizing their potential advantages in handling real-world forecasting challenges.
+        
+        G. Peter Zhang (2002) “Time series forecasting using a hybrid ARIMA and neural network model”. [7] The research paper explores time series forecasting by proposing a hybrid methodology that combines the Autoregressive Integrated Moving Average (ARIMA) model with Artificial Neural Networks (ANNs). ARIMA has been a popular linear model in time series forecasting, while recent studies suggest that ANNs offer a promising alternative with flexible nonlinear modeling capabilities. The hybrid approach aims to leverage the strengths of both models to enhance forecasting accuracy. The motivation behind this combination arises from the challenges in determining whether a time series is linear or nonlinear, the presence of both linear and nonlinear patterns in real-world data, and the recognition that no single method is universally superior. The paper argues that the hybrid model addresses these issues and presents experimental results using real datasets to support its effectiveness. The literature review highlights the importance of model combination for improved forecasting accuracy, drawing on the well-known M-competition and emphasizing the benefits of combining dissimilar models to reduce generalization variance and model uncertainty. The authors position their work within the context of ongoing efforts to enhance time series forecasting methodologies.
+
+    \subsection{Research Paper Study}
+        The following table summarizes our research paper review in tabular form.
+        % \scriptsize
+        \setlength\tabcolsep{0.006\textwidth}
+        \begin{longtable}[H]{@{}
+        >{\centering\arraybackslash} M{0.06\textwidth}
+        >{\justifying\arraybackslash} M{0.12\textwidth}
+        >{\justifying\arraybackslash} M{0.2\textwidth}
+        >{\justifying\arraybackslash} M{0.18\textwidth}
+        >{\justifying\arraybackslash} M{0.12\textwidth}
+        >{\justifying\arraybackslash} M{0.12\textwidth}
+        >{\justifying\arraybackslash} M{0.14\textwidth}
+        @{}}
+            \toprule
+                % \setlength\tabcolsep{0.0\textwidth}
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.06\textwidth}}{\textbf{Ref. No.}} & 
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.12\textwidth}}{\textbf{Work carried out}} & 
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.2\textwidth}}{\textbf{Methodology}} & 
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.18\textwidth}}{\textbf{Evaluation Metrics}} & 
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.12\textwidth}}{\textbf{Dataset}} & 
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.12\textwidth}}{\textbf{Claims}} & 
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.14\textwidth}@{}}{\textbf{Findings}}\\
+            \toprule
+            \endhead
+                % % \begin{headers}
+                %     \toprule
+                %     \thead{Ref.\\No.} &
+                %     \thead{Work carried out} &
+                %     \thead{Methodology} &
+                %     \thead{Evaluation Metrics} &
+                %     \thead{Dataset} &
+                %     \thead{Claims} &
+                %     \thead{Findings}
+                %     % {\textbf{Ref. No.}} & {\centering{\textbf{Work carried out}}} & {\centering{\textbf{Methodology}}} & 
+                %     % \multicolumn{2}{c}{\textbf{Evaluation Metrics}}
+                %     % % \centering{\textbf{Evaluation Metrics}}
+                %     % & \centering{\textbf{Dataset}} & \centering{\textbf{Claims}} & \centering{\textbf{Findings}}
+                % % \end{headers}
+                % \endhead
+                
+                \cite{sami} &
+                Mapping and comparing ML methods &
+                Framework development, method mapping, performance assessment. &
+                Mapping, comparison, ablation testing for evaluation. &
+                Kaggle &
+                Common language, improved forecasting methods. &
+                Complexity understanding, needs further exploration.\\
+                
+                \bottomrule
+            \caption{Literature Review - summary of research papers studied}
+        \end{longtable}
+
+    \newpage
+    \subsection{Patent Study}
+        The following table summarizes our patent review in tabular form.
+        
+        \setlength\tabcolsep{0.006\textwidth}
+        \begin{longtable}[H]{@{}
+        >{\centering\arraybackslash}M{0.22\textwidth}
+        >{\justifying\sloppy\arraybackslash} M{0.18\textwidth}
+        >{\justifying\sloppy\arraybackslash} M{0.586\textwidth}
+        @{}}
+                    \toprule
+                    \multicolumn{1}{@{}>{\centering\arraybackslash}M{0.22\textwidth}}{\textbf{Application Number}} & 
+                    \multicolumn{1}{>{\centering\sloppy\arraybackslash} M{0.18\textwidth}}{\textbf{Title}} & 
+                    \multicolumn{1}{>{\centering\sloppy\arraybackslash} M{0.557\textwidth}@{}}{\textbf{Abstract}}\\
+                    \toprule
+                \endhead
+                
+                CN103577581B & Agricultural product price trend forecasting method & The technique of agricultural product price trend forecasting described in the invention includes the following steps. Step 1: computer-acquired article relevant to agricultural commodity price and with a forecasting standpoint; Step 2: Duplicate elimination is completed on the collected articles; Extract and save the article's important element in step three.Step 4: The location of the agricultural product-related area mentioned in the article is found; Step 5: Quantify and preserve agricultural products according to the given predictability viewpoint after analyzing expert opinions using text mining technology; Step 6: Utilizing the model established so that agricultural product price is carried out-trend prediction, the trend prediction viewpoint delivering time, agricultural product affiliated area, agricultural product sort, and quantization according to article is carried out using microcomputer modeling.\\
+    
+                \midrule
+                
+                CN105205099B & A kind of agricultural product price analysis method & The steps included in the technique of agricultural product price analysis that the present invention relates to are as follows: Information about the types of agricultural products is gathered using one assembled classifier of pre-trained search engines; The default commodities trading website is crawled to obtain the geographic location information of the supplier for each category of agricultural commodity as well as the pricing data .It is divided based on the  area where agricultural goods are cultivated, with each agricultural product kind carrying out agricultural production and obtaining information on the area where agricultural goods are cultivated for each kind.\\
+    
+                \midrule
+                
+                WO2018232845A1 & Smart agriculture management method and system & The present invention relates to a smart agriculture management system and method, the system comprising: monitoring soil nutrient data and moisture data; acquiring historical weather data and predicted weather data; acquiring historical price data; comparing the nutrient data with a nutrient content standard value and comparing the moisture data with a moisture content standard value; processing and analyzing the historical price data of the crop and the historical weather data. The system consists of a control center, a soil monitoring module, an information-gathering module for the weather, and an acquisition module for prices.\\
+                
+                \bottomrule
+            \caption{Literature Review - summary of patents studied}
+        \end{longtable}

@@ -1,0 +1,98 @@
+% % Font size chart
+% https://latex-tutorial.com/changing-font-size
+
+% % Font size hierarcy
+% tiny < scriptsize < footnotesize < small < normalsize < large < Large < LARGE < huge < Huge
+
+% % Changing default element names
+% https://tex.stackexchange.com/questions/82993/how-to-change-the-name-of-document-elements-like-figure-contents-bibliogr
+
+\documentclass[a4paper, hidelinks, 12 pt, table]{article}
+\input{General/Preamble} % Loads in the preamble 
+\input{General/Settings} % Loads in user defined settings
+% \usepackage[none]{hyphenat}
+
+% \setmainfont{Times New Roman}
+% \setmainfont{Times New Roman}[
+%     SmallCapsFont = {TeX Gyre Termes},
+%     SmallCapsFeatures = {Letters = SmallCaps},
+% ]
+
+\renewcommand{\contentsname}{
+    \begin{center}
+        \huge{Contents}
+    \end{center}
+}
+
+\begin{document}
+
+    \sloppy
+    
+    % % Serif Family Computer Modern
+    % \sffamily
+    % \renewcommand{\rmdefault}{\sfdefault}
+    
+    % % Times New Roman
+    % \fontfamily{ptm}\selectfont
+    % \renewcommand{\rmdefault}{}
+    
+    % \newpage
+    % \input{Chapters/0.1 Frontpage}
+    % \newpage
+    % \input{Chapters/0.2 Certificate}
+    % \newpage
+    % \input{Chapters/0.3 Acknowledgement}
+    % \newpage
+    % \input{Chapters/0.4 Abstract}
+    
+    % Generates a ToC without page number
+    {\hypersetup{linkcolor=black} % Keeps the ToC black even with non-black linkcolor
+    \newpage
+    \tableofcontents\thispagestyle{empty}}
+
+    \newgeometry {
+        top = 1 in,
+        bottom = 1 in,
+        left = 1 in,
+        right = 1 in
+    }
+    
+    % Creates the introduction, starting page numbering
+    \pagenumbering{arabic}
+    
+    \newpage
+    \input{Chapters/1. Introduction}
+    
+    \newpage
+    \input{Chapters/2. Aim and Objectives}
+    
+    \newpage
+    \input{Chapters/3. Literature Review}
+    
+    \newpage
+    \input{Chapters/4. Proposed Methodology}
+    
+    \newpage
+    \input{Chapters/5. Results and Discussion}
+    
+    \newpage
+    \input{Chapters/6. Conclusion and Future Scope}
+    
+    % % Creates references using the Biblatex 
+    \newpage
+    \hypersetup{
+        colorlinks = false,
+        linkcolor = blue,
+        % filecolor = black,
+        urlcolor = blue,
+        % mailcolor = black
+    }
+    \bibliographystyle{plain}
+    \bibliography{General/References.bib}
+
+    % % Appendix
+    \appendix
+    \newpage
+    \input{Chapters/A. Appendix}
+
+\end{document}

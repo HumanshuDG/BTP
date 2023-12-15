@@ -1,0 +1,97 @@
+\section{Proposed Methodology}
+% block styles
+    \tikzstyle{block} = [rectangle, draw, fill = blue!20, text width = 11em, text centered, rounded corners, minimum height = 2em]
+    \tikzstyle{mlmodel} = [rectangle, fill = blue!8, draw = white, text width = 7em, text centered, rounded corners, font = \scriptsize]
+    \tikzstyle{mlmodellside} = [rectangle, fill = blue!14, text width = 6em, text height = 4em, text centered, rounded corners, font = \scriptsize]
+    \tikzstyle{mlmodelrside} = [rectangle, fill = blue!14, text centered, text width = 30em, text height = 4em, rounded corners, font = \tiny]
+    \tikzstyle{mlmodelrsidetop} = [rectangle, text centered, align = north, text height = 2em, rounded corners, font = \tiny]
+    \tikzstyle{mlmodelrsidebottom} = [rectangle, text centered, align = center, text width = 50 em, text height = 2em, rounded corners, font = \tiny]
+    \tikzstyle{mlmodelrsidenode} = [rectangle, fill = blue!8, draw = white, text centered, text width = 7em, rounded corners, font = \scriptsize]
+    \tikzstyle{level} = [rectangle, text centered, text width = 34em, rounded corners, font = \tiny]
+    \tikzstyle{levell} = [rectangle, text centered, text width = 34em,, height = 30em, rounded corners, font = \tiny]
+    \tikzstyle{line} = [draw, -latex']
+    \tikzstyle{cloud} = [draw, ellipse, fill = red!20, node distance = 12em, minimum height = 2em]
+    
+    \begin{figure}[H]
+        \centering \sffamily
+        \resizebox{\textwidth}{!}{
+            \begin{tikzpicture}[node distance = 1em]
+            
+                % define nodes
+                \node[circle, draw, font=\tiny] (start) {START};
+                \node [block, below = of start] (data) {Data Collection \\ {\scriptsize{data.gov.in \& agmarknet.gov.in}}};
+                \node [block, below = of data] (preprocess) {Data Preprocessing};
+                \node [block, below = of preprocess] (features) {Feature Engineering};
+                \node [block, below = of features, text width = 38em] (mlmodel) {Selecting Machine Learning Model (using candidate algorithms) \\
+                    {
+                        \begin{tikzpicture}
+                            \node[mlmodellside] (mlmodellside) {
+                                \begin{tikzpicture}[node distance = 0.5em]
+                                    \node [mlmodel] (training) {Training};
+                                    \node [mlmodel, below = 1.4em of training] (validation) {Validation};
+                                    \path [line] ([xshift=2em]  validation.north)  --([xshift=2em]  training.south);
+                                    \path [line] ([xshift=-2em]  training.south)  --([xshift=-2em]  validation.north);;
+                                \end{tikzpicture}
+                            };
+                        \end{tikzpicture}
+                        % \path [line] (mlmodellside) -- (mlmodelrside);
+                        \begin{tikzpicture}
+                            \node[mlmodelrside] (mlmodelrside) {
+                                \begin{tikzpicture}
+                                    \node[mlmodelrsidetop, anchor=mlmodelrside.north] (mlmodels) {
+                                        \begin{tikzpicture}
+                                            \node [mlmodelrsidenode] (ar) {AR};
+                                            \node [mlmodelrsidenode, right = of ar] (arima) {ARIMA};
+                                            \node [mlmodelrsidenode, right = of arima] (lr) {LR};
+                                            \node [mlmodelrsidenode, right = of lr] (svr) {SVR};
+                                            \node [mlmodelrsidenode, right = of svr] (cnn) {CNN};
+                                            \node [empty, right = of cnn] (ld) {\textbf{\ldots}};
+                                            \node [mlmodelrsidenode, right = of ld] (dl) {DL Models};
+                                        \end{tikzpicture}
+                                    };
+                                    \node[mlmodelrsidebottom, anchor=south, below = of mlmodels] (text) {
+                                        \vspace{-2\baselineskip}
+                                        \begin{itemize}
+                                            \item
+                                                Exploration of different learning mechanism.
+                                            \item
+                                                Exploration of different performance evaluation metrics.
+                                            \item
+                                                Exploration of different Convolutional Neural Network architechture.
+                                        \end{itemize}}
+                                    % \node[mlmodelrsidebottom, anchor=south, below = of mlmodels] (text) {\newline dsafasfmlkasf \newline \newline}
+                                \end{tikzpicture}
+                            };
+                            % \node [empty, above = of ] (ld) {\scriptsize{Example Text rewrn wejnew rwe rjkne wrkjnewjr kewjkrnewjn rewkj}};
+                            % \node [empty] (ld) {\scriptsize{Example Text rewrn wejnew rwe rjkne wrkjnewjr kewjkrnewjn rewkj}};
+                        \end{tikzpicture}
+                    }
+                };
+                % \node [block, below = of mlmodel] (train) {Model Training};
+                % \node [block, below = of train] (validate) {Model Validation};
+                \node [block, below = of mlmodel] (test) {Model Testing};
+                \node [block, below = of test] (forecast) {Price Forecasting};
+                \node [block, below = of forecast] (evaluate) {Evaluation};
+                \node [cloud, left of = forecast, xshift = -2em] (external) {External Factors};
+                \node [block, right = 4.5em of evaluate, fill = green!20, text width = 6em] (deploy) {Deployment};
+                \node[circle, right of = deploy, xshift = 6em, draw, fill = black!30, font=\tiny] (stop) {STOP};
+                % draw edges
+                \path [line] (start) -- (data);
+                \path [line] (data) -- (preprocess);
+                \path [line] (preprocess) -- (features);
+                \path [line] (features) -- (mlmodel);
+                \path [line] (mlmodel) -- (test);
+                % \path [line] (train) -- (validate);
+                % \path [line] (validate) -- (test);
+                \path [line] (test) -- (forecast);
+                \path [line] (forecast) -- (evaluate);
+                \path [line] (data) -- node[above] {\scriptsize{Existing standard datasets}} ++(22em,0) |- (mlmodel);
+                \path [line] (evaluate) -- node[above] {\scriptsize{Non-Satisfactory}} ++(-22em,0)  |- (preprocess);
+                \path [line] (external) -- (forecast);
+                \path [line] (evaluate) -- node[above] {\scriptsize{Satisfactory}} (deploy);
+                \path [line] (deploy) -- (stop);
+            \end{tikzpicture}
+        }
+        % define caption
+        \caption{Methodology Block Diagram for Machine learning based short-term forecasting of orange and cotton crop prices in the context of the Indian market}
+    \end{figure}

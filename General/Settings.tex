@@ -1,0 +1,108 @@
+% Give your report a title
+\newcommand\reporttitle{\textbf{Mini Project Report}}
+\newcommand\group{\textbf{Group - B1}}
+
+% Add an experiment number
+% \newcommand\expno{\textbf{Experiment No. 1}}
+
+% Insert course code, name, quartile number, and year (or any other subtitle)
+\newcommand\reportsubtitle{
+    \textbf{Machine Learning based short-term\\ forecasting of Orange and Cotton crop\\ prices in context of Indian market\\}
+}
+
+% Date and location (default: current date and YCCE, Nagpur)
+\newcommand\placeanddate{
+    \color{black}
+    {\includegraphics[width=0.1\paperwidth]{Figures/Logos/YCCE.png}}\\
+    \vspace{10pt}
+    % \today
+    {October, 2023}\\
+    \vspace{10pt}
+    \textbf{
+        Department of Computer Technology\\
+        \vspace{10pt}
+        Yeshwantrao Chavan College of Engineering\\
+        Wanadongri, Nagpur, Maharashtra, India - 441110\\
+    }    
+    % \vspace{1.6 cm}
+}
+
+% Define theme-color (color of the logo). Can be changed to drastically change the look of the template
+
+% % aqua
+% \definecolor{theme-color}{RGB}{0, 128, 255}
+% olive
+% \definecolor{theme-color}{RGB}{0, 168, 89}
+% % rose
+% \definecolor{theme-color}{RGB}{248, 194, 217}
+% % brass
+% \definecolor{theme-color}{RGB}{153, 145, 62}
+% % black
+\definecolor{theme-color}{RGB}{0, 0, 0}
+
+% Formats section, subsection and subsubsection titles
+% % \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}[<after-code>]
+\titleformat{\section}{\color{theme-color}\Large\raggedleft}{\thesection\enskip}{0 pt}{\fontfamily{cmr}\scshape\bfseries}{}{} % Formats section titles
+\titleformat{\subsection}{\color{theme-color}\large\bfseries}{\thesubsection\enskip}{0 pt}{\fontfamily{cmr}\scshape\bfseries} % Formats subsection titles
+\titleformat{\subsubsection}{\color{theme-color}\bfseries}{\thesubsubsection\enskip}{0 pt}{\fontfamily{cmr}\scshape\bfseries} % Formats subsubsection titles
+
+% Settings for paragraph spacing 
+\titlespacing*{\section}{0 pt}{0 pt}{4\baselineskip}
+\titlespacing*{\subsection}{0 pt}{\baselineskip}{0.5\baselineskip}
+\titlespacing*{\subsubsection}{0 pt}{\baselineskip}{0.5\baselineskip}
+\setlist{nolistsep, leftmargin = 2 em}
+
+% Table Settings
+\newcolumntype{M}[1]{>{\sloppy\arraybackslash}m{#1}}
+\newcolumntype{J}[1]{>{\justifying\sloppy\arraybackslash}X}
+
+% Settings for figure size
+\newcommand{\figsize}{0.24\textwidth}
+
+% All of the following code can be removed to be left with (close to) default LaTeX behavior. 
+
+% Sets up hyperlinks in the document to be colored
+\hypersetup{
+    colorlinks=true,
+    linkcolor=theme-color,
+    urlcolor=theme-color,
+    citecolor = theme-color
+}
+\urlstyle{same} % Defines settings for link and reference formatting
+
+
+% Change bullet style for level 1, 2 and 3 respectively for itemize
+\renewcommand{\labelitemi}{\scriptsize\textcolor{theme-color}{$\blacksquare$}}% level 1
+\renewcommand{\labelitemii}{\scriptsize\textcolor{theme-color}{$\square$}}% level 2
+\renewcommand{\labelitemiii}{\textcolor{theme-color}{$\circ$}}% level 3
+
+% Change bullet style for level 1, 2 and 3 respectively for enumerate
+\renewcommand{\labelenumi}{\textbf{\textcolor{theme-color}{\arabic*.}}}% level 1
+\renewcommand{\labelenumii}{\textbf{\textcolor{theme-color}{[\alph*]}}}% level 2
+\renewcommand{\labelenumiii}{\textbf{\textcolor{theme-color}{\roman*.}}}% level 3
+
+% Have reference labels be linked to section (section 3 will have fig. 3.1 etc.)
+\counterwithin{equation}{section} % For equations
+\counterwithin{figure}{section} % For figures
+\counterwithin{table}{section} % For tables
+
+% Creates a beautiful header/footer
+% \pagestyle{fancy}
+% \lhead{\group { | }\reporttitle}
+% \rhead{\includegraphics[height = 20pt]{Figures/Logos/YCCE Logo (BW).png}}
+% \renewcommand{\footrulewidth}{0.4pt}
+\cfoot{\thepage}
+
+
+% Formats captions
+\DeclareCaptionFont{theme-color}{\color{theme-color}}
+\captionsetup{labelfont={theme-color,bf}}
+
+ % Changes font to mlmodern
+\usepackage{mlmodern}
+
+% Removes indent when starting a new paragraph
+\setlength\parindent{0pt}
+
+% Limits the ToC to sections and subsections (no subsubsec.)
+\setcounter{tocdepth}{2}
