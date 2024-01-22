@@ -15,7 +15,7 @@
     \begin{figure}[H]
         \centering \sffamily
         \resizebox{\textwidth}{!}{
-            \begin{tikzpicture}[node distance = 1em]
+            \begin{tikzpicture}[node distance = 1 em]
             
                 % define nodes
                 \node[circle, draw, font=\tiny] (start) {START};
@@ -93,5 +93,97 @@
             \end{tikzpicture}
         }
         % define caption
-        \caption{Methodology Block Diagram for Machine learning based short-term forecasting of orange and cotton crop prices in the context of the Indian market}
+        % \caption{Methodology Block Diagram for Machine learning based short-term forecasting of orange and cotton crop prices in the context of the Indian market}
+        \caption{Methodology Block Diagram}
+        \label{fig: block}
     \end{figure}
+
+    Block schematic of the procedure adopted to carry out is depicted in \ref{fig: block}.
+
+    The procedure adopted to carry out proposed work with details of the procedure is as follows:
+
+    \subsection{Data Collection}
+        \subsubsection{Source}
+            The dataset is aquired from the Government of India's Open Government Data Platform \cite{data-ogd} and Agricultural Market \cite{data-agm}.
+        
+        \subsubsection{Period}
+            We have taken the data for five years to be able to sufficiently generalize our model and a moderate data size as per our computing infrastructure.
+        
+    \subsection{Preliminary overview of data}
+        The dataset has eight attributes, namely - \texttt{state}, \texttt{district}, \texttt{market}, \texttt{commodity}, \texttt{variety}, \texttt{arrival\_date}, \texttt{min\_price}, \texttt{max\_price}. Our target variable is \texttt{modal\_price}.
+
+        This dataset had some missing values for \texttt{min\_price} and \texttt{max\_price} which we had to pre-process before moving on to building a model based on the dataset.
+        
+    \subsection{Exploratory Data Analysis}
+        \begin{itemize}
+            \item 
+                Studying the existing Exploratory Data Analysis techniques.
+            \item 
+                Applying selected techniques on the collected dataset.
+            \item
+                Based on the performed Exploratory Data Analysis technique generate indicators.
+            \item 
+                Try to generalize the data based on patterns observed and verify it using indicators.
+            \item
+                Accordingly make changes in dataset.
+        \end{itemize}
+    
+    \subsection{Preprocessing}
+        \begin{itemize}
+            \item 
+                Imputing the missing values using various strategies like - mean, median, mode or nearest neighbor.
+            \item 
+                Convert all the categorical values into numerical values by using encoding techniques like one-hot, label, ordinal, etc.
+            \item
+                Scaling the values to make computation uniform across each iteration and epochs.
+            \item
+                Normalizing the data points and removing outliers based on statistical tests to avoid overfitting and high model complexity.
+        \end{itemize}
+    
+    \subsection{Feature Engineering}
+        \begin{itemize}
+            \item
+                After using encodings like one-hot encoding our attribute size grows proportional to the distinct values in the original attribute.
+            \item
+                We use feature selection techniques like Principal Component Analysis to capture the essence of all the attributes and compress the variablity in k-features.
+        \end{itemize}    
+    
+    \subsection{Model Selection}
+        \begin{itemize}
+            \item
+                Study regression based models that can potentially be good in forecasting.
+            \item
+                Select a subset of these models to form candidate algorithm set.
+            \item
+                Identify performance evaluation metrics for these implementations.
+            \item
+                Execute vanilla implementation of each candidate algorithms and select the most promising subset for the next steps.
+        \end{itemize}
+    
+    \subsection{Model Training}
+        \begin{itemize}
+            \item
+                Split the dataset into distinct training and testing set. From the training set keep a subset as validation set.
+            \item
+                Utilise different strategies for validation like k-fold validation.
+            \item
+                Cycle between various training validation cycles to tune the parameters to obtain the most optimum set of performance evaluation metrics.
+        \end{itemize}
+    
+    \subsection{ARIMA implementation}
+        \begin{itemize}
+            \item
+                Apply the ARIMA model on the refined dataset.
+            \item
+                Check all the parameters and tune the parameters to obtain the most optimum set of performance evaluation metrics.
+        \end{itemize}
+    
+        \subsection{Model Evaluation}
+        \begin{itemize}
+            \item
+                Apply all the trained models on the testing set.
+            \item
+                Select the best model based on all the performance evaluation metrics. 
+            \item
+                The best performing model will be our final model for forecasting.
+        \end{itemize}

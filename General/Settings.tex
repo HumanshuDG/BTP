@@ -1,13 +1,8 @@
-% Give your report a title
-\newcommand\reporttitle{\textbf{Mini Project Report}}
-\newcommand\group{\textbf{Group - B1}}
-
-% Add an experiment number
-% \newcommand\expno{\textbf{Experiment No. 1}}
-
-% Insert course code, name, quartile number, and year (or any other subtitle)
-\newcommand\reportsubtitle{
-    \textbf{Machine Learning based short-term\\ forecasting of Orange and Cotton crop\\ prices in context of Indian market\\}
+\newcommand{\addmargin}[]{
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw [line width = 2 pt] ($(current page.north west) + (0.4 in, -0.4 in)$) rectangle ($(current page.south east) + (-0.4 in, 0.4 in)$);
+        \draw [line width = 1 pt] ($(current page.north west) + (0.44 in, -0.44 in)$) rectangle ($(current page.south east) + (-0.44 in, 0.44 in)$);
+    \end{tikzpicture}
 }
 
 % Date and location (default: current date and YCCE, Nagpur)
@@ -17,13 +12,20 @@
     \vspace{10pt}
     % \today
     {October, 2023}\\
-    \vspace{10pt}
-    \textbf{
-        Department of Computer Technology\\
+    \vspace{6pt}
+    \bfseries
+        {Department of Computer Technology}\\
         \vspace{10pt}
-        Yeshwantrao Chavan College of Engineering\\
-        Wanadongri, Nagpur, Maharashtra, India - 441110\\
-    }    
+        % Yeshwantrao Chavan College of Engineering\\
+        % Wanadongri, Nagpur, Maharashtra, India - 441110\\
+        % \vspace{6pt}
+        % \scriptsize{(An Autonomous Institution Affiliated to Rashtrasant Tukadoji Maharaj Nagpur University)}\\
+        
+        \large{Yeshwantrao Chavan College of Engineering}\\
+        \vspace{2pt}
+        \scriptsize{(An Autonomous Institution Affiliated to Rashtrasant Tukadoji Maharaj Nagpur University)}\\
+        \vspace{2pt}
+        \small{Hingna Road, Wanadongri, Nagpur, Maharashtra, India - 441110}\\
     % \vspace{1.6 cm}
 }
 
@@ -48,13 +50,13 @@
 
 % Settings for paragraph spacing 
 \titlespacing*{\section}{0 pt}{0 pt}{4\baselineskip}
-\titlespacing*{\subsection}{0 pt}{\baselineskip}{0.5\baselineskip}
-\titlespacing*{\subsubsection}{0 pt}{\baselineskip}{0.5\baselineskip}
+\titlespacing*{\subsection}{0 pt}{\baselineskip}{\baselineskip}
+\titlespacing*{\subsubsection}{0 pt}{\baselineskip}{\baselineskip}
 \setlist{nolistsep, leftmargin = 2 em}
 
 % Table Settings
-\newcolumntype{M}[1]{>{\sloppy\arraybackslash}m{#1}}
-\newcolumntype{J}[1]{>{\justifying\sloppy\arraybackslash}X}
+\newcolumntype{M}[1]{>{\justifying}m{#1}}
+\newcolumntype{J}[1]{>{\justifying}m{#1}}
 
 % Settings for figure size
 \newcommand{\figsize}{0.24\textwidth}
@@ -95,14 +97,14 @@
 
 
 % Formats captions
-\DeclareCaptionFont{theme-color}{\color{theme-color}}
-\captionsetup{labelfont={theme-color,bf}}
+% \DeclareCaptionFont{theme-color}{\color{theme-color}}
+\captionsetup{labelfont={theme-color, bf}}
 
  % Changes font to mlmodern
 \usepackage{mlmodern}
 
 % Removes indent when starting a new paragraph
-\setlength\parindent{0pt}
+% \setlength\parindent{0pt}
 
 % Limits the ToC to sections and subsections (no subsubsec.)
 \setcounter{tocdepth}{2}

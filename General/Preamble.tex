@@ -12,11 +12,13 @@
 \usepackage{longtable} % For Long Tables spanning across pages
 \usepackage{times} % For fonts
 \usepackage{lipsum} % Creates dummy text lorem ipsum to showcase typsetting 
-\usepackage[utf8]{inputenc}
-\usepackage{hyphenat} % wordwrap with hyphens
+% \usepackage{hyphenat} % wordwrap with hyphens
+\usepackage{microtype} % minimize manual wordwrap
 \usepackage[T1]{fontenc}
 \usepackage{parskip} % for paragraph spacing
 \usepackage{graphicx} % Allows the use of \begin{figure} and \includegraphics
+\graphicspath{ {Figures/} }
+
 \usepackage{float} % Useful for specifying the location of a figure ([H] for ex.)
 \usepackage{caption} % Adds additional customization for (figure) captions
 \usepackage{subcaption} % Needed to create sub-figures
@@ -24,10 +26,9 @@
 \usepackage{tabularx, array} % Adds additional customization for tables
 \usepackage{tabu} % Adds additional customization for tables
 \usepackage{booktabs} % For generally nicer looking tables
-
-\usepackage[nottoc,numbib]{tocbibind} % Automatically adds bibliography to ToC
+\usepackage[nottoc, notlof, notlot, numbib]{tocbibind} % Automatically adds bibliography to ToC
 % \usepackage[margin = 2.5cm]{geometry} % Allows for custom (wider) margins
-\usepackage{microtype} % Slightly loosens margin restrictions for nicer spacing  
+\usepackage{microtype} % Slightly loosens margin restrictions for nicer spacing
 \usepackage{titlesec} % Used to create custom section and subsection titles
 \usepackage{titletoc} % Used to create a custom ToC
 \usepackage{appendix} % Any chapter after \appendix is given a letter as index
@@ -45,7 +46,7 @@
 
 % \usepackage[
 %     backend = bibtex, % biber,
-%     style = ieee,
+%     style = ieeetrandoi,
 % ]{biblatex}
 % \addbibresource{General/References.bib}
 
@@ -57,13 +58,6 @@
 \usepackage{pgf, pgffor}
 
 \usepackage{geometry, lipsum}
-
-\geometry {
-    top = 1.2 in,
-    bottom = 1.4 in,
-    left = 1.2 in,
-    right = 1.2 in
-}
 
 % Allotting space for the header
 \setlength{\headheight}{20pt}%

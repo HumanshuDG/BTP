@@ -1,14 +1,13 @@
 \newgeometry {
-    top = 1 in,
+    top = 0.5 in,
     bottom = 1 in,
     left = 1 in,
     right = 1 in
 }
-\thispagestyle{empty}
-\pagenumbering{roman}
+% \thispagestyle{empty}
 
 \begin{certificate}
-
+    \addmargin
     \begin{center}
         \parbox{\textwidth}{
             % \hspace{0.02\textwidth}
@@ -49,11 +48,11 @@
         \vspace{1 em}
     \end{center}
     
-    \justifying\sloppy{
-        This is to certify that the Mini Project Report titled \textbf{\textit{Machine Learning based short-term forecasting of Orange and Cotton crop prices in context of Indian market}} being submitted towards the partial fulfillment of the requirement of the Mini Project course in Semester - VII, Bachelor of Technology in Computer Technology is approved.
+    \justifying{
+        This is to certify that the Mini Project Report titled \textbf{\textit{Machine Learning based short-term forecasting of Orange and Cotton crop prices in context of Indian market}} being submitted towards the partial fulfillment of the requirement for the Mini Project course in Semester - VII, Bachelor of Technology in Computer Technology is approved.
     }
 
-    % \vspace{2 em}
+    \vspace{1 em}
     
     Submitted by:\\
     \begin{table}[H]
@@ -69,25 +68,45 @@
         \end{tabu}
     \end{table}
 
-    % \vspace{1 em}
-    
     \begin{table}[H]
-        % \centering
-        % \sffamily
         \begin{tabu} to \linewidth {r l}
-            \textbf{Date} & \rule{80pt}{0.1pt}\\
-            \textbf{Place} & \rule{80pt}{0.1pt}
+            \textbf{Date} & \rule{100pt}{0.1pt}\\
+            \\
+            \textbf{Place} & \rule{100pt}{0.1pt}
         \end{tabu}
     \end{table}
     % }
+    
+    % \begin{table}[H]
+    %     \centering
+    %     % \sffamily
+    %     \setlength{\tabcolsep}{6 pt}
+    %     \begin{tabu} to \linewidth {C}
+    %         {\hrulefill}\\
+    %         {Prof. (Dr.) Nileshsingh V. Thakur}\\
+    %         \textbf{Project Guide}\\
+    %         \\ \\
+    %         {\hrulefill}\\
+    %         {Mrs. Smita R. Kapse}\\
+    %         \textbf{Project Coordinator}\\
+    %         \\ \\
+    %         {\hrulefill}\\
+    %         {Dr. Rakhi D. Wajgi}\\
+    %         \textbf{Head of the Department}
+    %     \end{tabu}
+    % \end{table}
+    
     \begin{table}[b]
-            \centering
-            % \sffamily
-            \setlength{\tabcolsep}{6 pt}
-            \begin{tabu} to \linewidth {C C C}
-                {\hrulefill} & {\hrulefill} & {\hrulefill}\\
-                {Prof. (Dr.) Nileshsingh V. Thakur} & {Mrs. Smita R. Kapse} & {Dr. Rakhi D. Wajgi}\\
-                \textbf{Project Guide} & \textbf{Project Coordinator} & \textbf{Head of Department}
-            \end{tabu}
-        \end{table}
+        \centering
+        % \sffamily
+        \setlength{\tabcolsep}{6 pt}
+        \begin{tabu} to \linewidth {C C C}
+            {\hrulefill} & {\hrulefill} & {\hrulefill}\\
+            {Prof. (Dr.) Nileshsingh V. Thakur} & {Mrs. Smita R. Kapse} & {Dr. Rakhi D. Wajgi}\\
+            \textbf{Project Guide} & \textbf{Project Coordinator} & \textbf{Head of Department}\\
+            {\vspace{10 pt}}
+        \end{tabu}
+    \end{table}
+
+    
 \end{certificate}

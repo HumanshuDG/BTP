@@ -1,22 +1,28 @@
 \newgeometry {
     top = 2 in,
-    bottom = 2 in,
-    left = 2 in,
-    right = 2 in
+    bottom = 1 in,
+    left = 1 in,
+    right = 1 in
 }
-\thispagestyle{empty}
-
 \renewcommand{\abstractname}{}
-\renewcommand{\absnamepos}{empty}
+% \renewcommand{\absnamepos}{empty}
 
 \begin{abstract}
     
+    \addmargin
+    
     \begin{center}
         \huge{Abstract}
+        \vspace{2 em}
     \end{center}
-    
-    \vspace{2 em}
-    \normalsize \justifying \sloppy \textit{
-        In this project, the aim is to build a Machine Learning-based model for the short-term forecasting of orange and cotton crop prices in the context of an Indian market. For this purpose, we will use the existing dataset available at Indian Government. We start by performing the exploratory data analysis(EDA) to take care of missing data and to identify the patterns. Later, we will split the data records to training, testing and validation set. We will use regression based candidate algorithms for this forecasting. Specifically, ANN (Artificial Neural Network), ARIMA (Auto Regressive Integrated Moving Average), LR (Logistic Regression) and SVR (Support Vector Regression) will be used. To compare the results, we will also implement the ARIMA model. We are performing this time series analysis based on regional and seasonal aspects. We consider regional aspects by dividing dataset in tiers of urban and rural cities. We will compare the results and accuracy of machine learning models at different geographic levels, such as country, state, and particular cities.}
+
+    \it
+        This project endeavours to construct a Machine Learning-based model tailored to the short-term forecasting of orange and cotton crop prices in the Indian market. Leveraging an extensive dataset provided by the Indian Government, the project initiates with a pivotal phase of Exploratory Data Analysis (EDA). This process serves to address the challenges posed by missing data and, importantly, to unveil latent patterns inherent in the dataset.
+        
+        A key aspect of the project is data preparation and partitioning. The dataset is meticulously split into training, testing, and validation sets to facilitate the subsequent model development and evaluation phases.
+        
+        The forecasting methodology encompasses a spectrum of regression-based algorithms, including Artificial Neural Networks (ANN), Auto Regressive Integrated Moving Average (ARIMA), Logistic Regression (LR), and Support Vector Regression (SVR). Additionally, an ARIMA model is incorporated for comparative assessment. These algorithms serve as the workhorses for our price prediction model.
+        
+        The analysis extends beyond mere algorithm selection. Regional and seasonal dynamics are incorporated into the model's framework. The dataset is categorized into urban and rural segments to account for regional variations. Notably, model performance and accuracy are evaluated at different geographical granularities, including the national, state, and city levels, to provide a comprehensive understanding of the price prediction capability.
         
 \end{abstract}

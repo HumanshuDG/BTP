@@ -18,10 +18,25 @@
 %     SmallCapsFeatures = {Letters = SmallCaps},
 % ]
 
-\renewcommand{\contentsname}{
-    \begin{center}
-        \huge{Contents}
-    \end{center}
+\renewcommand{\contentsname}{\begin{center}Table of Contents\end{center}\vspace{-2\baselineskip}}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+
+\pgfpagesdeclarelayout{boxed} {
+    \edef\pgfpageoptionborder{1pt}
+}
+{
+    \pgfpagesphysicalpageoptions {%
+        pages={1,2,3,4}%
+    }
+    \pgfpageslogicalpageoptions{1} {
+        border code = \pgfsetlinewidth{1 pt}\pgfstroke,%
+        border shrink = \pgfpageoptionborder,%
+        resized width = 0.94\pgfphysicalwidth,%
+        resized height = \pgfphysicalheight,%
+        center = \pgfpoint{.5\pgfphysicalwidth}{.506\pgfphysicalheight}%
+    }%
 }
 
 \begin{document}
@@ -36,19 +51,20 @@
     % \fontfamily{ptm}\selectfont
     % \renewcommand{\rmdefault}{}
     
-    % \newpage
-    % \input{Chapters/0.1 Frontpage}
-    % \newpage
-    % \input{Chapters/0.2 Certificate}
-    % \newpage
-    % \input{Chapters/0.3 Acknowledgement}
-    % \newpage
-    % \input{Chapters/0.4 Abstract}
+    % \pgfpagesuselayout{boxed}
     
-    % Generates a ToC without page number
-    {\hypersetup{linkcolor=black} % Keeps the ToC black even with non-black linkcolor
     \newpage
-    \tableofcontents\thispagestyle{empty}}
+    \input{Chapters/0.1 Frontpage}
+    
+    \newpage
+    \pagenumbering{Roman}
+    \input{Chapters/0.2 Certificate}
+    
+    \newpage
+    \input{Chapters/0.3 Acknowledgement}
+    
+    \newpage
+    \input{Chapters/0.4 Abstract}
 
     \newgeometry {
         top = 1 in,
@@ -57,10 +73,28 @@
         right = 1 in
     }
     
-    % Creates the introduction, starting page numbering
-    \pagenumbering{arabic}
+    \newpage
+    \addmargin
+    % Generates a ToC without page number
+    {\hypersetup{linkcolor=black} % Keeps the ToC black even with non-black linkcolor
+    \tableofcontents%\thispagestyle{empty}}
+    \addtocontents{toc}{\protect}
     
     \newpage
+    \addmargin
+    \input{Chapters/0.5 List of Figures}
+    \newpage
+    \addmargin
+    \input{Chapters/0.6 List of Tables}
+    
+    % Creates the introduction, starting page numbering
+    
+    % Times New Roman
+    \fontfamily{ptm}\selectfont
+    \renewcommand{\rmdefault}{}
+
+    \newpage
+    \pagenumbering{arabic}
     \input{Chapters/1. Introduction}
     
     \newpage
@@ -82,17 +116,18 @@
     \newpage
     \hypersetup{
         colorlinks = false,
-        linkcolor = blue,
+        linkcolor = black,
         % filecolor = black,
-        urlcolor = blue,
+        urlcolor = black,
         % mailcolor = black
     }
-    \bibliographystyle{plain}
+    \bibliographystyle{General/IEEEtranDOI}
+    % \bibliographystyle{plain}
     \bibliography{General/References.bib}
 
-    % % Appendix
-    \appendix
-    \newpage
-    \input{Chapters/A. Appendix}
+    % % % Appendix
+    % \appendix
+    % \newpage
+    % \input{Chapters/A. Appendix}
 
 \end{document}

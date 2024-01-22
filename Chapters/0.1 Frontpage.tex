@@ -5,23 +5,36 @@
     right = 0.6 in
 }
 
-\begin{titlepage}
+% Give your report a title
+\newcommand\reporttitle{\textbf{Mini Project Report}}
+\newcommand\group{\textbf{Group - B1}}
 
+% Add an experiment number
+% \newcommand\expno{\textbf{Experiment No. 1}}
+
+% Insert course code, name, quartile number, and year (or any other subtitle)
+\newcommand\reportsubtitle{
+    \textbf{Machine Learning based short-term\\ forecasting of Orange and Cotton crop\\ prices in context of Indian market\\}
+}
+
+\begin{titlepage}
+    
+    \addmargin
     \centering
     % \sffamily
 
-% \includegraphics[width=.36\textwidth]{Figures/Logos/SIH 2023.png}
+% \includegraphics[width=.36\textwidth]{Figures/Logos/YCCE.png}
 
 % \vspace{8 cm}
 
-{\Large \reporttitle}\\
+{\Large \reporttitle}
 
 % {\large \expno}
 \vspace{1 em}
 on
 \vspace{1 em}
 
-{\LARGE \reportsubtitle}\\
+{\LARGE \reportsubtitle}
 
 \vspace{4 em}
 
@@ -32,7 +45,6 @@ on
     \large
         \vspace{1 em}
     \begin{tabu} to \linewidth {C C C C C}
-        
         \textbf{Student Name} & \textbf{Enrollment No.} & \textbf{Semester} & \textbf{Section} & \textbf{Roll No.}\\
         Mr. Humanshu D G & 20010635 & VII & B & 147\\
         Mr. Susrut Patole & 20010522 & VII & B & 169\\
@@ -55,6 +67,8 @@ on
 \end{table}
 
 % \tikz[remember picture, overlay, opacity = 0.11]\node[anchor = south, inner sep = 0 pt] at (current page.south) {\includegraphics[width=\paperwidth]{Figures/Logos/YCCE Main Building tall.jpg}};
+
+% \tikz[remember picture, overlay]\node[anchor = south, inner sep = 0 pt] at (current page.south) {\includegraphics[width=\paperwidth]{Figures/Logos/YCCE Main Building tall.jpg}};
 
 \mbox{}
     \vfill

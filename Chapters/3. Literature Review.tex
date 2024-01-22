@@ -1,41 +1,87 @@
+% \include{General/Settings}
 \section{Literature Review}
+
     \subsection{General Work}
-        Casper Solheim Bojer. (2022) “Understanding machine learning-based forecasting methods: A decomposition framework and research opportunities”\cite{bojer}. The research paper titled "Understanding machine learning-based forecasting methods: A decomposition framework and research opportunities" by C.S. Bojer offers insights into the growing interest in machine learning-based forecasting methods. It highlights their successful applications in forecasting competitions like the M4, M5, and Kaggle, challenging traditional statistical methods. The paper underscores the need for a systematic understanding of these methods due to their complexity, with diverse components including preprocessing, feature engineering, and ensembling. It introduces a framework for regression-based machine learning forecasting, aiming to standardize terminology and abstraction for researchers. The framework is applied to map and compare winning solutions from the M5 Uncertainty competition, emphasizing the complexity of strategies employed. Additionally, the paper identifies research areas such as cross-learning, feature engineering, and cross-validation, signaling potential advancements in the field of machine learning-based forecasting.
         
-        Gianluca Bontempi , Souhaib Ben Taieb, and Yann-A¨el Le Borgne (2013) “Machine Learning Strategies for Time Series Forecasting”. [2] The research paper titled "Machine Learning Strategies for Time Series Forecasting" authored by Gianluca Bontempi, Souhaib Ben Taieb, and Yann-Aël Le Borgne provides a comprehensive overview of the role of machine learning techniques in the field of time series forecasting. The paper addresses the growing demand for accurate forecasting across various domains and the transition from traditional linear statistical methods, such as ARIMA models, to machine learning models. It highlights the importance of formalizing one-step forecasting problems as supervised learning tasks and discusses the use of local learning techniques for handling temporal data. The paper explores various strategies for multi-step forecasting, including the Recursive, Direct, and Multiple Output (MIMO) strategies, each with its advantages and limitations. Additionally, the paper introduces the concept of the DIRMO strategy, which combines elements of both Direct and MIMO strategies, providing a flexible approach to multi-step forecasting. The authors also delve into the use of local learning techniques for improving long-term predictions within these strategies.
+        Casper Solheim Bojer (2022) \cite{bojer2022} The research paper titled "Understanding machine learning-based forecasting methods: A decomposition framework and research opportunities" by C.S. Bojer offers insights into the growing interest in machine learning-based forecasting methods. It highlights their successful applications in forecasting competitions like the M4, M5, and Kaggle, challenging traditional statistical methods. The paper underscores the need for a systematic understanding of these methods due to their complexity, with diverse components including preprocessing, feature engineering, and ensembling. It introduces a framework for regression-based machine learning forecasting, aiming to standardize terminology and abstraction for researchers. The framework is applied to map and compare winning solutions from the M5 Uncertainty competition, emphasizing the complexity of strategies employed. Additionally, the paper identifies research areas such as cross-learning, feature engineering, and cross-validation, signaling potential advancements in the field of machine learning-based forecasting.
         
-        Yitong Li, Kai Wu, Jing Liu (2023) “Self-paced ARIMA for robust time series prediction”.[3] The  ARIMA (autoregressive integrated moving average ) model is a widely respected and traditional linear model for time series prediction, known for its effectiveness in various domains. However, its vulnerability to noisy data, leading to instability and reduced performance, has not received sufficient attention. In this study, we introduce the spARIMA framework to enhance the reliability of time series prediction. We implement a sequential training approach in batches, taking into account noise levels and their impact on accurate modeling, with the goal of minimizing noise-related disruptions during training. To leverage the advantages of self-paced learning (SPL), spARIMA integrates a differential prediction model into the ARIMA framework.
+        Bontempi et al. \cite{Bontempi2013} The research paper titled "Machine Learning Strategies for Time Series Forecasting" authored by Gianluca Bontempi, Souhaib Ben Taieb, and Yann-Aël Le Borgne provides a comprehensive overview of the role of machine learning techniques in the field of time series forecasting. The paper addresses the growing demand for accurate forecasting across various domains and the transition from traditional linear statistical methods, such as ARIMA models, to machine learning models. It highlights the importance of formalizing one-step forecasting problems as supervised learning tasks and discusses the use of local learning techniques for handling temporal data. The paper explores various strategies for multi-step forecasting, including the Recursive, Direct, and Multiple Output (MIMO) strategies, each with its advantages and limitations. Additionally, the paper introduces the concept of the DIRMO strategy, which combines elements of both Direct and MIMO strategies, providing a flexible approach to multi-step forecasting. The authors also delve into the use of local learning techniques for improving long-term predictions within these strategies.
         
-        Ahmed Tealab, Hesham Hefny, Amr Badr (2017) “Forecasting of nonlinear time series using ANN”. [4] Since basic linear time series models often fall short in fully explaining certain aspects of economic and financial data, it becomes crucial to categorize time series based on their linearity characteristics when conducting forecasts. This approach ensures that linear time series continue to be the focal point of both academic and practical research. Predicting nonlinear time series, especially those containing inherent moving average components, using computational intelligence methods like neural networks can be challenging, given that real-world time series often exhibit dynamic behavior, autoregressive elements, and inherited moving average terms. Research focusing on the prediction of nonlinear time series with moving average components is relatively rare. In this study, we demonstrate that conventional neural networks struggle to effectively capture the behavior of nonlinear time series with moving average terms, resulting in subpar forecasting performance.
+        Li et al. (2023) \cite{yitongli2023} The  ARIMA (autoregressive integrated moving average ) model is a widely respected and traditional linear model for time series prediction, known for its effectiveness in various domains. However, its vulnerability to noisy data, leading to instability and reduced performance, has not received sufficient attention. In this study, we introduce the spARIMA framework to enhance the reliability of time series prediction. We implement a sequential training approach in batches, taking into account noise levels and their impact on accurate modeling, with the goal of minimizing noise-related disruptions during training. To leverage the advantages of self-paced learning (SPL), spARIMA integrates a differential prediction model into the ARIMA framework.
         
-        Hanyu Yang a, Xutao Li a, Wenhao Qiang a, Yuhan Zhao a, Wei Zhang b, Chang Tang c (2021) “A network traffic forecasting method based on SA optimized ARIMA–BP neural network”.[5]It explores the domain of network traffic forecasting, emphasizing the challenges faced by traditional linear and non-linear models. The proposed method integrates Simulated Annealing (SA)-optimized AutoRegressive Integrated Moving Average (ARIMA) with Back Propagation Neural Network (BPNN) to enhance prediction accuracy. The research highlights the contribution of the approach in extracting both linear and non-linear features from network traffic data, addressing limitations in existing models. Notable advances include improved network congestion control mechanisms and enhanced accuracy in fields relying on precise network traffic predictions. Real-world datasets validate the superiority of the proposed method, showcasing its effectiveness against single and hybrid prediction models. The study also conducts sensitivity analysis, demonstrating the method's stability across varying temporal spans. Future directions involve considering user behavior impact, exploring additional factors, and applying the method in Software-Defined Networking (SDN) systems for automated adjustments based on predicted trends. In conclusion, the proposed SA-optimized ARIMA–BPNN method proves promising for various applications, offering superior accuracy in network traffic forecasting and addressing non-linear complexities.
+        Tealab et al. (2017) \cite{tealab2017} Since basic linear time series models often fall short in fully explaining certain aspects of economic and financial data, it becomes crucial to categorize time series based on their linearity characteristics when conducting forecasts. This approach ensures that linear time series continue to be the focal point of both academic and practical research. Predicting nonlinear time series, especially those containing inherent moving average components, using computational intelligence methods like neural networks can be challenging, given that real-world time series often exhibit dynamic behavior, autoregressive elements, and inherited moving average terms. Research focusing on the prediction of nonlinear time series with moving average components is relatively rare. In this study, we demonstrate that conventional neural networks struggle to effectively capture the behavior of nonlinear time series with moving average terms, resulting in subpar forecasting performance.
         
-        Jennifer L. Castle , Michael P. Clements, David F. Hendry (2014).“Robust approaches to forecasting ”.[6] The paper investigates robust approaches to forecasting, particularly focusing on a new class of robust devices in contrast to equilibrium-correction models. The authors explore the forecasting properties of these robust methods in the face of empirical challenges such as measurement errors, impulses, omitted variables, unanticipated location shifts, and incorrectly included variables. The study applies these robust approaches to forecast US GDP using autoregressive models and models with factors extracted from a large dataset of macroeconomic variables. The empirical analysis spans both the Great Recession and an earlier, more stable period, providing insights into the performance of robust forecasting devices under different economic conditions. The authors compare the proposed robust devices with traditional models like autoregression and factor models, evaluating their effectiveness in mitigating forecast failures caused by shifts in the economic environment. The results suggest that the robust devices, especially those with smoothing techniques, show promise in improving forecast accuracy, particularly in the face of significant economic shifts. The empirical findings contribute to the understanding of robust forecasting methods, emphasizing their potential advantages in handling real-world forecasting challenges.
+        Yang et al. \cite{yang2021} It explores the domain of network traffic forecasting, emphasizing the challenges faced by traditional linear and non-linear models. The proposed method integrates Simulated Annealing (SA)-optimized AutoRegressive Integrated Moving Average (ARIMA) with Back Propagation Neural Network (BPNN) to enhance prediction accuracy. The research highlights the contribution of the approach in extracting both linear and non-linear features from network traffic data, addressing limitations in existing models. Notable advances include improved network congestion control mechanisms and enhanced accuracy in fields relying on precise network traffic predictions. Real-world datasets validate the superiority of the proposed method, showcasing its effectiveness against single and hybrid prediction models. The study also conducts sensitivity analysis, demonstrating the method's stability across varying temporal spans. Future directions involve considering user behavior impact, exploring additional factors, and applying the method in Software-Defined Networking (SDN) systems for automated adjustments based on predicted trends. In conclusion, the proposed SA-optimized ARIMA–BPNN method proves promising for various applications, offering superior accuracy in network traffic forecasting and addressing non-linear complexities.
         
-        G. Peter Zhang (2002) “Time series forecasting using a hybrid ARIMA and neural network model”. [7] The research paper explores time series forecasting by proposing a hybrid methodology that combines the Autoregressive Integrated Moving Average (ARIMA) model with Artificial Neural Networks (ANNs). ARIMA has been a popular linear model in time series forecasting, while recent studies suggest that ANNs offer a promising alternative with flexible nonlinear modeling capabilities. The hybrid approach aims to leverage the strengths of both models to enhance forecasting accuracy. The motivation behind this combination arises from the challenges in determining whether a time series is linear or nonlinear, the presence of both linear and nonlinear patterns in real-world data, and the recognition that no single method is universally superior. The paper argues that the hybrid model addresses these issues and presents experimental results using real datasets to support its effectiveness. The literature review highlights the importance of model combination for improved forecasting accuracy, drawing on the well-known M-competition and emphasizing the benefits of combining dissimilar models to reduce generalization variance and model uncertainty. The authors position their work within the context of ongoing efforts to enhance time series forecasting methodologies.
+        Castle et al. \cite{castle2015} The paper investigates robust approaches to forecasting, particularly focusing on a new class of robust devices in contrast to equilibrium-correction models. The authors explore the forecasting properties of these robust methods in the face of empirical challenges such as measurement errors, impulses, omitted variables, unanticipated location shifts, and incorrectly included variables. The study applies these robust approaches to forecast US GDP using autoregressive models and models with factors extracted from a large dataset of macroeconomic variables. The empirical analysis spans both the Great Recession and an earlier, more stable period, providing insights into the performance of robust forecasting devices under different economic conditions. The authors compare the proposed robust devices with traditional models like autoregression and factor models, evaluating their effectiveness in mitigating forecast failures caused by shifts in the economic environment. The results suggest that the robust devices, especially those with smoothing techniques, show promise in improving forecast accuracy, particularly in the face of significant economic shifts. The empirical findings contribute to the understanding of robust forecasting methods, emphasizing their potential advantages in handling real-world forecasting challenges.
+        
+        Peter Zhang (2002) \cite{zhang2003} The research paper explores time series forecasting by proposing a hybrid methodology that combines the Autoregressive Integrated Moving Average (ARIMA) model with Artificial Neural Networks (ANNs). ARIMA has been a popular linear model in time series forecasting, while recent studies suggest that ANNs offer a promising alternative with flexible nonlinear modeling capabilities. The hybrid approach aims to leverage the strengths of both models to enhance forecasting accuracy. The motivation behind this combination arises from the challenges in determining whether a time series is linear or nonlinear, the presence of both linear and nonlinear patterns in real-world data, and the recognition that no single method is universally superior. The paper argues that the hybrid model addresses these issues and presents experimental results using real datasets to support its effectiveness. The literature review highlights the importance of model combination for improved forecasting accuracy, drawing on the well-known M-competition and emphasizing the benefits of combining dissimilar models to reduce generalization variance and model uncertainty. The authors position their work within the context of ongoing efforts to enhance time series forecasting methodologies.
+
+    \subsection{Related Work}
+    
+        Zhanga et al. \cite{zhang2018} In this study, a novel neural network model called the QR-RBF model is introduced, which combines the principles of quantile regression and radial basis functions. This model offers two key capabilities:
+        It characterizes the distribution of soybean price ranges through the use of quantile regression models.
+        It approximates the nonlinear aspects of soybean prices using RBF neural networks.
+        To optimize the parameters of the QR-RBF neural network model, the research proposes a hybrid algorithm called GDGA. GDGA combines the global search capabilities of the genetic algorithm with the local search capabilities of gradient descent.
+        The analysis of monthly domestic soybean price data in China led to the following conclusions:
+        The hybrid GDGA algorithm performs effectively in optimizing the model.
+        The factors influencing soybean prices vary depending on the price level.
+        Money supply and port distribution prices for imported soybeans are significant factors across multiple quantiles.
+        Domestic soybean production and the consumer confidence index are significant primarily for lower quantiles.
+        Soybean import volume and the consumer price index are significant mainly for higher quantiles.
+        
+        Ahumada et al. \cite{ahumada2016} This paper delves into the forecasting of food prices, focusing on the interdependence of individual models for corn, soybeans, and wheat. The authors address the strong historical correlations among food prices, examining whether the accuracy of individual models can be enhanced by considering their cross-dependence. The study covers the period of 2008–2014, marked by instability, and employs robust methodologies and recursive schemes to deal with potential breaks in the data. The investigation is grounded in the understanding that these three food prices exhibit significant correlations, and the paper explores whether joint modeling could lead to improved forecasting. The research is particularly timely given the common behaviors observed in the prices of these commodities, influenced by factors such as the growth of emerging economies, biofuel demand, and macroeconomic developments. The paper aims to contribute insights into conditional forecasting models for food prices, considering the effects of external variables. 
+        
+        Sabu et al. (2020) \cite{sabu2020} In this research, a combination of time-series and machine learning models is employed to predict monthly arecanut prices in the Kerala region. The dataset comprises price data spanning from 2007 to 2017, serving as a benchmark for evaluating the performance of three models: SARIMA, Holt Winters Seasonal approach, and the LSTM neural network. The model that exhibited the best fit to the data turned out to be the LSTM neural network model.Fluctuations in the prices of agricultural products have a detrimental impact on a country's GDP. These price changes also carry emotional and financial consequences for farmers who invest years of hard work, only to see their efforts sometimes yield disappointing results.The agricultural supply chain may benefit from price prediction by using it to better manage and minimize the risk of price changes. Predictive analytics is anticipated to address issues facing the average person as a result of the decline in agricultural productivity brought on by uncertain climatic conditions, global warming, etc. India produces a significant amount of arecanuts, with Kerala coming in second place. Due to price volatility and climatic change, farmers in Kerala have recently shifted from arecanut production to other crops. 
+        
+        Pantazi et al. (2016) \cite{pantazi2016} The study focuses on predicting wheat yield variations within a field by leveraging high-resolution multi-layer information from on-line proximal soil sensing and satellite imagery. Traditional linear models for yield prediction based on limited soil samples have shown variable spatial and temporal results. The paper explores the application of computational intelligence, including artificial neural networks (ANNs) and self-organizing maps (SOMs), to integrate data from soil sensors and crop growth characteristics for more accurate predictions. Previous non-linear modeling approaches have been limited by low accuracy and the lack of fusion of high-resolution soil data with remotely sensed crop growth. The research introduces an algorithm based on supervised SOMs to address these limitations, aiming to provide a flexible and accurate framework for predicting wheat yield and visualizing correlations between soil parameters, crop characteristics, and yield. The results indicate that the supervised Kohonen Network (SKN) model outperforms other models, achieving an overall accuracy of 81.65\% in cross-validation. The study emphasizes the need for a unified framework, incorporating high-resolution data fusion for improved yield predictions in precision farming.
+        
+        Kyriazi et al. \cite{kyriazi2019} They present an innovative forecasting approach termed "adaptive learning forecasting," which supports both forecast averaging and learning from forecast errors. They delve into its theoretical characteristics and illustrate that, in certain scenarios, it enhances the mean squared error (MSE) a priori. The research also reveals that the learning rate, contingent on previous forecast errors, follows a nonlinear pattern. This methodology finds wide-ranging applications and can even enhance the MSE when compared to the most basic benchmark models.To exemplify the strategy's applicability, the researchers employ data on agricultural prices for various agricultural commodities and real GDP growth figures for relevant countries. They consider numerous forecasting models, including both univariate and bivariate ones related to output and productivity. This is particularly important because agricultural price time series are typically short and display irregular cyclical patterns that correlate with economic performance and productivity. Their findings confirm the effectiveness of the new approach and the predictability of agricultural price movements.
+        
+        Shiferaw (2022) \cite{shiferaw2023} They present an innovative forecasting approach termed "adaptive learning forecasting," which supports both forecast averaging and learning from forecast errors. They delve into its theoretical characteristics and illustrate that, in certain scenarios, it enhances the mean squared error (MSE) a priori. The research also reveals that the learning rate, contingent on previous forecast errors, follows a nonlinear pattern. This methodology finds wide-ranging applications and can even enhance the MSE when compared to the most basic benchmark models.To exemplify the strategy's applicability, the researchers employ data on agricultural prices for various agricultural commodities and real GDP growth figures for relevant countries. They consider numerous forecasting models, including both univariate and bivariate ones related to output and productivity. This is particularly important because agricultural price time series are typically short and display irregular cyclical patterns that correlate with economic performance and productivity. Their findings confirm the effectiveness of the new approach and the predictability of agricultural price movements.
+        
+        Scott Armstrong et al. \cite{armstrong2015} This research paper presents the Golden Rule of forecasting as its central and unifying concept. Being conservative when forecasting is the Golden Rule. A cautious forecast is in line with our collective understanding of the past and present. To exercise prudence, forecasters should actively search for and utilize all relevant information pertaining to the matter, including knowledge about techniques that have demonstrated effectiveness in the specific context. The Golden Rule logically leads to the deduction of twenty-eight rules. An assessment of the evidence turned up 105 publications with experimental comparisons; 102 of them are in favor of the recommendations. The average forecast error increased by more than two-fifths when a single guideline was disregarded. The Golden Rule should always be followed, especially in complex and unclear situations when bias is likely. 
+        
+        Yuehjen E. Shao and Jun-Ting Dai(2018) \cite{shao2018} The supply of three major food crops, namely rice, wheat, and corn, is rapidly diminishing due to global climate change, limited land availability, and a rapidly growing population. Predicting the prices of these essential food crops has become a subject of considerable attention. While numerous feature selection techniques (FSMs) have been developed for integrated forecasting models, a significant challenge arises from the absence of future values for these critical factors, making predictions using these factors impossible.In this study, an Autoregressive Integrated Moving Average (ARIMA) model is employed as the foundational statistical method (FSM) within computational intelligence (CI) models to forecast the prices of these three vital food crops. The ARIMA model is chosen because it can identify important self-predictor variables with calculable future values. The proposed integrated forecasting models encompass not only ARIMA but also include Support Vector Regression (SVR), Multivariate Adaptive Regression Splines (MARS), and Artificial Neural Networks (ANNs). The research conducts a comparative analysis and discussion on the prediction accuracies of the proposed integrated model in contrast to ARIMA, ANN, SVR, MARS, and other existing models.
+        
+        Dimpfla et al. \cite{dimpfl2017} This paper delves into the dynam Robert C. Jungb, Michael Fladc(2017) Price discovery in agricultural commodity matric relationship between spot and futures prices of various agricultural commodities, such as corn, wheat, soybeans, soybean meal and oil, feeder and live cattle, as well as lean hogs. The primary focus is on determining which markets play a predominant role in price discovery for these commodities. The authors employ a unique information share methodology and find that the spot market overwhelmingly leads price discovery, with the futures market contributing less than 10\% in the Hasbrouck sense. This study challenges the notion of adverse effects of futures speculation on commodity prices in the long run, emphasizing the robustness of spot market dynamics. The paper contributes to the broader literature on price discovery, challenging the prevailing view that futures markets typically dominate this process across various assets. The research provides insights into the specific context of agricultural commodity markets and their susceptibility to speculation, contributing valuable perspectives to both academic and practical discussions on market dynamics and regulation.
+        
+        Zou et al. \cite{zou2007} The paper conducts a comprehensive investigation into the predictive abilities of ARIMA, artificial neural networks (ANNs), and a combined model in forecasting Chinese wheat prices. Time series forecasting is underscored as a critical domain, especially in the absence of a well-defined data generating process or explanatory model. The literature review reveals divergent findings in the comparison of traditional models with ANN, with some studies favoring neural networks' superiority in forecasting, while others report mixed or conflicting results. Emphasizing the effectiveness of combining different models, the paper notes the M-competition's conclusion that forecast combination often leads to improved performance. The study's twofold objective includes assessing the forecasting performance of the mentioned models for Chinese food grain markets and examining their ability to predict turning points, providing valuable insights into nonlinear methods' efficiency in enhancing forecasting outcomes.
+        
+        Cheung et al. \cite{cheung2023} The research paper proposes the application of a novel Clustered 3D-CNN model to enhance the prediction of crop future prices. Traditional statistical methods, such as ARIMA, often fall short in capturing the non-stationary patterns and multidimensional influences on crop prices. The paper highlights the complex nature of factors affecting crop production and prices, including environmental changes and economic factors. The proposed Clustered 3D-CNN model is introduced as a solution, leveraging its ability to handle non-stationary data and learn non-linear patterns. The study compares the performance of the proposed model with the ARIMA model through experiments using real-world datasets. The results indicate that the Clustered 3D-CNN model outperforms ARIMA in terms of Mean Absolute Percentage Error (MAPE), Root Mean Square Error (RMSE), and Mean Absolute Error (MAE). The research emphasizes the significance of considering various factors, including environmental and economic variables, for more accurate crop price predictions. The implications suggest that the proposed model could aid decision-makers in predicting crop price trends and developing strategic plans to address food insecurity issues. The paper concludes by discussing the limitations of traditional statistical models and the potential of the Clustered 3D-CNN model in agricultural price forecasting.
+        
+        V. Sneha; V. Bhavana (2023) \cite{sneha2023} Sugarcane is a critical commercial crop in India, and the agricultural sector has benefited significantly from advancements in technology, particularly in the realm of machine learning (ML). This cutting-edge technology has proven invaluable to farmers by providing comprehensive recommendations and insights to enhance crop quality and productivity while reducing farming losses. Before planting sugarcane, accurate estimations of yield and market prices are essential for making profitable decisions. Machine learning techniques such as Decision Tree Regressor, Multi Linear Regression, Random Forest, Adaboost Regressor, and Lasso Regression are employed to predict sugarcane yield. Additionally, an ARIMA model is used to forecast sugarcane prices. Several factors, including historical sugarcane yields in specific locations, rainfall patterns, and the state in which sugarcane is cultivated, all contribute to the accurate prediction of sugarcane yields. Meanwhile, sugarcane price predictions are based on time series analysis of historical price data.
+        
+        B Chaitra,K Meena,(2023) \cite{chaitra2023} From the agricultural industry's perspective, the market price of a specific crop reflects its current demand. To facilitate monitoring of agricultural prices, the Council of Agriculture (COA) has established an official website that provides open data on daily market prices across more than 15 local markets in Taiwan, encompassing over 100 different crops. In parallel, the Institute for Information Industry (III) has introduced the smart agri-management platform (S.A.M.P.), a comprehensive cloud-based solution for agri-business.This research paper focuses on the development of a crop price forecasting service within S.A.M.P., inspired by the availability of open data on crop prices. The service automatically retrieves historical price data from the official website, utilizing it as a training dataset, and employs well-established time series analysis algorithms for price forecasting. The study employs three techniques: Partial Least Square (PLS), Artificial Neural Network (ANN), and Autoregressive Integrated Moving Average (ARIMA). Moreover, to explore nonlinear relationships within historical prices, the researchers introduce Response Surface Methodology (RSM) into PLS, resulting in a novel approach called RSMPLS. The performance of these four algorithms is compared using price data obtained from the First Fruit and Vegetable Wholesale Market in Taipei, focusing on crops like cauliflower, watermelon, bok choy, and cabbage. Based on experimental data, PLS and ANN exhibit smaller percentage errors in their forecasting accuracy.
+        
+        Ndunagu et al. \cite{ndunagu2022} India's economy relies heavily on agriculture. India has a sizable chunk of arable land. Numerous crops are in high demand abroad. Other than software, one of the main exports from India is food. But because of unpredictable weather patterns, a lack of human resources, and poor crop selection, farmers are unable to turn a profit. The agriculture profession is gradually losing relevance as a result of urbanization as well. For accurate Yield and Crop Price Prediction. This issue has led numerous researchers to identify the challenges and employ a diverse range of machine learning methods, including Autoregressive Integrated Moving Average (ARIMA), Decision Trees, Long Short-Term Memory (LSTM), K Nearest Neighbors (KNN), and others. These techniques assist farmers in making informed decisions regarding crop selection, ultimately enabling them to achieve optimal yields and profits.
+        
+        Xiong et al. \cite{xiong2015} This paper addresses the challenging task of interval forecasting for agricultural commodity futures prices, particularly focusing on the Chinese futures market. With the significant growth in China's agricultural commodity futures markets, accurate forecasting is crucial for risk management and speculation. The study proposes a novel method, VECM–MSVR (Vector Error Correction Model–Multi-Output Support Vector Regression), within the established 'linear and nonlinear' modeling framework. This method aims to capture both linear and nonlinear patterns in futures prices by combining VECM and MSVR. The interval forecasting approach provides a range of values, considering the inherent volatility and complexity of agricultural commodity prices. The authors compare the proposed method with several benchmarks, including VECM, SSVR, MSVR, ARIMA–MSVR, and ARIMA–ANN, using Chinese cotton and corn futures prices as experimental data. The results demonstrate that VECM–MSVR consistently outperforms other methods, showcasing its potential as a promising alternative for forecasting interval-valued agricultural commodity futures prices. The paper contributes to the literature by exploring interval forecasting, an underexplored area in agricultural commodity futures, and providing empirical evidence from the Chinese market.
+        
+        Etienne et al. \cite{etienne2015} This paper investigates the dynamics of corn, soybean, and wheat futures markets from 2004 to 2013, a period marked by significant price volatility. Contrary to prevailing hypotheses, the study finds that explosive price episodes or "bubbles" occurred only around two percent of the time, and when they did, they were short-lived and of modest magnitude. Notably, commodity index trader positions did not significantly influence positive bubble occurrences, challenging the widely held "Masters Hypothesis." The study also examines the impact of speculation, revealing that it either has minimal or negative effects on price explosiveness. The research sheds light on the complex interplay of fundamental factors, such as inventories, exports, and economic growth, in driving grain futures markets. In summary, this work provides nuanced insights into the factors contributing to price explosiveness and challenges prevailing narratives about the role of speculation in agricultural futures markets.
 
     \subsection{Research Paper Study}
         The following table summarizes our research paper review in tabular form.
         % \scriptsize
-        \setlength\tabcolsep{0.006\textwidth}
+        \setlength\tabcolsep{1 mm}
         \begin{longtable}[H]{@{}
-        >{\centering\arraybackslash} M{0.06\textwidth}
+        >{\centering\arraybackslash} M{0.04\textwidth}
         >{\justifying\arraybackslash} M{0.12\textwidth}
-        >{\justifying\arraybackslash} M{0.2\textwidth}
+        >{\justifying\arraybackslash} M{0.18\textwidth}
         >{\justifying\arraybackslash} M{0.18\textwidth}
         >{\justifying\arraybackslash} M{0.12\textwidth}
         >{\justifying\arraybackslash} M{0.12\textwidth}
-        >{\justifying\arraybackslash} M{0.14\textwidth}
+        >{\justifying\arraybackslash} M{0.15\textwidth}
         @{}}
+            % \setlength\tabcolsep{1 mm}
             \toprule
-                % \setlength\tabcolsep{0.0\textwidth}
-                \multicolumn{1}{>{\centering\arraybackslash} M{0.06\textwidth}}{\textbf{Ref. No.}} & 
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.04\textwidth}}{\textbf{Ref. No.}} & 
                 \multicolumn{1}{>{\centering\arraybackslash} M{0.12\textwidth}}{\textbf{Work carried out}} & 
-                \multicolumn{1}{>{\centering\arraybackslash} M{0.2\textwidth}}{\textbf{Methodology}} & 
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.18\textwidth}}{\textbf{Methodology}} & 
                 \multicolumn{1}{>{\centering\arraybackslash} M{0.18\textwidth}}{\textbf{Evaluation Metrics}} & 
                 \multicolumn{1}{>{\centering\arraybackslash} M{0.12\textwidth}}{\textbf{Dataset}} & 
                 \multicolumn{1}{>{\centering\arraybackslash} M{0.12\textwidth}}{\textbf{Claims}} & 
-                \multicolumn{1}{>{\centering\arraybackslash} M{0.14\textwidth}@{}}{\textbf{Findings}}\\
+                \multicolumn{1}{>{\centering\arraybackslash} M{0.15\textwidth}@{}}{\textbf{Findings}}\\
             \toprule
             \endhead
                 % % \begin{headers}
@@ -54,32 +100,275 @@
                 % % \end{headers}
                 % \endhead
                 
-                \cite{sami} &
+                \cite{bojer2022} &
                 Mapping and comparing ML methods &
                 Framework development, method mapping, performance assessment. &
                 Mapping, comparison, ablation testing for evaluation. &
                 Kaggle &
                 Common language, improved forecasting methods. &
-                Complexity understanding, needs further exploration.\\
+                Complexity understanding, needs further exploration.
+                \\
+
+                \midrule
+
+                \cite{Bontempi2013} &
+                Comparative analysis of time series forecasting methods. &
+                Application of various machine learning strategies. &
+                Accuracy, robustness, and computational efficiency assessment. &
+                Diverse time series datasets from different domains. &
+                Superior forecasting accuracy with machine learning approaches. &
+                Insufficient Local Learning Exploration ,Limited Adaptive Model Integration.
+                \\
+
+                \midrule
+
+                \cite{yitongli2023} &
+                Extended ARIMA, introduced spARIMA, diversity selection. &
+                Sequential training, diversity selection in spARIMA. &
+                Generalization, efficiency on noisy data. &
+                12 datasets for time series forecasting. &
+                spARIMA enhances time series forecasting. &
+                Improvements for complex trend information.
+                \\
+
+                \midrule
+
+                \cite{tealab2017} &
+                Assessment of time series forecasting methods. &
+                Evaluate neural networks for time series. &
+                Efficiency in forecasting nonlinear time series. &
+                Nonlinear time series simulation dataset. &
+                Common neural networks lack efficiency. &
+                Need models for nonlinear time series.
+                \\
+
+                \midrule
+                
+                \cite{yang2021} &
+                Integration of ARIMA and BPNN, Implementation of SA optimization, Prediction of network traffic. &
+                SA-optimized ARIMA–BPNN hybrid, ARIMA captures linear features, BPNN refines predictions, handling non-linearities. &
+                MAE, RMSE, MAPE metrics, Comparative analysis with existing models, Real-world network traffic datasets. &
+                Historical network traffic data, Two sampling points in WIDE project. &
+                Improved prediction accuracy, Outperforms traditional models, Enhanced network congestion control. &
+                Impact of user behavior, Exploration of additional factors, Application in SDN systems.
+                \\
+
+                \midrule
+
+                \cite{castle2015} &
+                New adaptive learning forecasting methodology &
+                Forecast averaging and error learning, with the learning rate based on past forecast errors being non-linear. MZ Regression &
+                Mean Squared Error (MSE), Mean Absolute Error (MAE) &
+                Data on European economies obtained from Eurostat &
+                Adaptive learning enhances forecasting accuracy for wide range of scenarios. Improving upon bench mark models. &
+                Learning rate parameter time-varying not utilized.  Joint optimization of averaging weights and the learning rate.
+                \\
+
+                \midrule
+                
+                \cite{zhang2003} &
+                Proposed hybrid ARIMA-ANN methodology. &
+                Combined linear ARIMA with nonlinear ANN. &
+                Assessed forecasting accuracy improvement. &
+                Real-world dataset. &
+                Hybrid model enhances accuracy. &
+                Addressing time series complexity gaps.
+                \\
+                
+                \midrule
+                
+                \cite{zhang2018} &
+                Forecasting soybean price in China. &
+                QR-RBF neural network with GDGA. &
+                Forecasting performance, convergence. &
+                Monthly domestic soybean price in China. &
+                Improved soybean price forecasting model. &
+                Influential factors stability, comprehensive exploration needed.
+                \\
+                
+                \midrule
+                
+                \cite{ahumada2016} &
+                Examining food price correlations. &
+                Utilizing joint modeling approaches. &
+                Assessing forecast improvements. &
+                Quarterly prices of corn, soybeans, and wheat. &
+                Improved accuracy with joint models. &
+                Limited updating schemes explored.
+                \\
+                
+                \midrule
+                
+                \cite{sabu2020} &
+                Prediction of Arecanut Prices in Kerala. &
+                SARIMA, Hot-Winters Seasonal Method, LSTM Neural Network. &
+                Root Mean Squared Error (RMSE) &
+                Arecanut price data spanning from 2007 to 2017. &
+                LSTM neural network model outperformed other methods. &
+                LSTM most effective model for arecanut price prediction. Data availability for LSTM training is a limitation.
+                \\
+                
+                \midrule
+                
+                \cite{pantazi2016} &
+                Predicting wheat yield variations using sensors, satellite imagery. &
+                Utilized self-organizing maps (SOMs), artificial neural networks (ANNs). &
+                Assessed accuracy through cross-validation and independent validation. &
+                Combined on-line soil sensing, satellite imagery, crop growth indicators. &
+                SKN model outperforms, achieving 81.65\% overall accuracy. &
+                Need for unified data fusion, high-resolution soil-crop correlation.                
+                \\
+                
+                \midrule
+                
+                \cite{kyriazi2019} &
+                Forecasting approaches and contrasted them with equilibrium correction models. &
+                Developed a framework. Mapped and assessed forecasting methods. &
+                Forecast performance through mapping, comparison, and ablation testing. &
+                Dataset from Stock and Watson. &
+                Robust devices outperformed equilibrium correction models in the presence of location shifts. &
+                Recursive updating and combining information not utilized.
+                \\
+                
+                \midrule
+                
+                \cite{shiferaw2023} &
+                Modeling the dynamic volatility of East African tea crop prices. &
+                Error distributions and scedastic functions for in-sample value-at-risk(VaR). MCMC approach. &
+                GARCH, EGARCH models (volatility and VaR). Factors fat tails, asymmetry, and regime switching. &
+                Monthly tea auction prices in USD from the Mombasa auction. &
+                EGARCH model exhibited superior performance in estimating volatility. &
+                Lack of high-frequency time series data. Multivariate GARCH models not explored.
+                \\
+                
+                \midrule
+                
+                \cite{armstrong2015} &
+                Formulation of Golden Rule of forecasting guidelines. &
+                Deduction of guidelines, evidence review. &
+                Accuracy, adherence to Golden Rule. &
+                Not Specified. &
+                Golden Rule of forecasting enhances forecast accuracy. &
+                Unexplored Method Validation, Non-expert Decision Evaluation.
+                \\
+                
+                \midrule
+                
+                \cite{shao2018} &
+                Integrated ARIMA with CI for food crop price prediction. &
+                ARIMA as a feature selector in CI models. &
+                MAE, RMSE, MAPE used for comparison. &
+                Real dataset: rice, wheat, corn prices (1990-2015). &
+                Proposed model outperforms in food crop price forecasting. &
+                Lack of focus on feature selection in crop price prediction, Limited research addressing unknown variables in crop price prediction.
+                \\
+
+                \midrule
+                
+                \cite{dimpfl2017} &
+                Analyzing agricultural commodity price discovery. &
+                Variance decomposition. &
+                Information share and variance decomposition. &
+                Specific datasets not mentioned. &
+                Spot markets dominate agricultural price discovery. &
+                Limited exploration of speculative impact.
+                \\
+                
+                \midrule
+                
+                \cite{zou2007} &
+                Comprehe\-nsive model comparison. &
+                ARIMA, artificial neural networks. &
+                Forecasting accuracy, turning points. &
+                Chinese wheat prices. &
+                Improved forecasting with combination. &
+                Limited turning point analysis.
+                \\
+                
+                \midrule
+                
+                \cite{cheung2023} &
+                Developed CNN model for crop prices. &
+                Clustered 3D-CNN for price prediction. &
+                MAPE, RMSE, MAE for model comparison. &
+                Data will be made available on request. &
+                CNN outperforms ARIMA in prediction. &
+                Variable choice, computational cost optimization.
+                \\
+                
+                \midrule
+                
+                \cite{sneha2023} &
+                Sugarcane yield and price forecasting. &
+                Machine learning algorithms, ARIMA model. &
+                Accuracy, precision, and model comparison. &
+                Historical yield, rainfall, price data. &
+                ML improves sugarcane yield forecasting accuracy. &
+                Limited discussion on model limitations.
+                \\
+                
+                \midrule
+                
+                \cite{chaitra2023} &
+                Crop prediction using machine learning models. &
+                ARIMA model along with NARY,Decision Tree, Linear Regression, Random Forest. &
+                Accuracy, Precision, Recall, F1 Score. &
+                Historical data of various agricultural parameters. &
+                Improved crop yield and profit predictions. &
+                Limited mention of climate impact.
+                \\
+                
+                \midrule
+                
+                \cite{ndunagu2022} &
+                Comparative price analysis of food items. &
+                ARIMA model for price forecasting. &
+                Forecast accuracy and price trends. &
+                National Bureau of Statistics data. &
+                ARIMA is effective for price forecasting. &
+                Unclear measures to address high prices.
+                \\
+                
+                \midrule
+                
+                \cite{xiong2015} &
+                Interval forecasting method development. &
+                Combined VECM and MSVR. &
+                Quantitative assessment, benchmark comparisons. &
+                Chinese cotton and corn futures. &
+                VECM-MSVR promising for forecasting. &
+                Limited interval research, Chinese focus, model integration, profitability analysis.
+                \\
+                
+                \midrule
+                
+                \cite{etienne2015} &
+                The study analyzes grain futures markets. &
+                Employed Phillips, Shi, Yu Bubble Test. &
+                Assessed price explosiveness factors. &
+                Utilized daily futures prices (2004-2013). &
+                Commodity index traders don't drive bubbles. &
+                Understanding speculative impact, market dynamics.
+                \\
                 
                 \bottomrule
-            \caption{Literature Review - summary of research papers studied}
+            \caption{Literature Review - summary of studied research papers}
         \end{longtable}
 
     \newpage
     \subsection{Patent Study}
         The following table summarizes our patent review in tabular form.
         
-        \setlength\tabcolsep{0.006\textwidth}
+        % \setlength\tabcolsep{1 mm}
         \begin{longtable}[H]{@{}
         >{\centering\arraybackslash}M{0.22\textwidth}
         >{\justifying\sloppy\arraybackslash} M{0.18\textwidth}
-        >{\justifying\sloppy\arraybackslash} M{0.586\textwidth}
+        >{\justifying\sloppy\arraybackslash} M{0.566\textwidth}
         @{}}
                     \toprule
                     \multicolumn{1}{@{}>{\centering\arraybackslash}M{0.22\textwidth}}{\textbf{Application Number}} & 
                     \multicolumn{1}{>{\centering\sloppy\arraybackslash} M{0.18\textwidth}}{\textbf{Title}} & 
-                    \multicolumn{1}{>{\centering\sloppy\arraybackslash} M{0.557\textwidth}@{}}{\textbf{Abstract}}\\
+                    \multicolumn{1}{>{\centering\sloppy\arraybackslash} M{0.566\textwidth}@{}}{\textbf{Abstract}}\\
                     \toprule
                 \endhead
                 
@@ -94,5 +383,34 @@
                 WO2018232845A1 & Smart agriculture management method and system & The present invention relates to a smart agriculture management system and method, the system comprising: monitoring soil nutrient data and moisture data; acquiring historical weather data and predicted weather data; acquiring historical price data; comparing the nutrient data with a nutrient content standard value and comparing the moisture data with a moisture content standard value; processing and analyzing the historical price data of the crop and the historical weather data. The system consists of a control center, a soil monitoring module, an information-gathering module for the weather, and an acquisition module for prices.\\
                 
                 \bottomrule
-            \caption{Literature Review - summary of patents studied}
+            
+            \caption{Literature Review - summary of studied patents}
         \end{longtable}
+
+    \subsection{Gaps identified}
+        \begin{enumerate}
+            \item Integration of ML(Machine Learning) and Time Series\\
+                While ML(machine learning) and time series forecasting methods are commonly used separately, there may be a gap in combining these two approaches effectively for crop price forecasting. Your project aims to bridge this gap by integrating both methods and comparing their performance.
+
+            \item Lack of Short-term Forecasting Models\\
+                Many existing studies focus on long-term crop price forecasting. However, short-term forecasting is essential for farmers and traders to make immediate decisions. Your project addresses this gap by specifically targeting short-term forecasts.Lack of Short-term Forecasting Models: Many existing studies focus on long-term crop price forecasting. However, short-term forecasting is essential for farmers and traders to make immediate decisions. Your project addresses this gap by specifically targeting short-term forecasts.
+            \item Model Comparison\\
+                While ARIMA is a broadly used benchmark for time series forecasting, there may be a gap in comparing its performance with machine learning models in the context of crop price forecasting. Your project fills this gap by conducting a comparative analysis.
+        \end{enumerate}
+
+    \subsection{Scope of improvement and limitations}
+        \subsubsection{Scope of Improvement}
+            \begin{enumerate}
+                \item
+                    The scope of this project is limited to the forecasting of orange and cotton crop prices in the Indian market using machine learning algorithms.
+                \item
+                    The system will be developed using publicly available data and will not involve any primary data collection.
+            \end{enumerate}
+        
+        \subsubsection{Limitations}
+            \begin{enumerate}
+                \item
+                    Much of the external factors cannot be accommodated into the model like unexpected climatic conditions and marketing conditions like hoarding.
+                \item
+                    Inferences will be very specific to the kind and specific variety of the crop chosen which means that a generalized model is not possible.
+            \end{enumerate}

@@ -1,8 +1,60 @@
 \section{Results and Discussion}
-    something
+    \subsection{Result}
+        The following table summarizes our findings of applied algorithms in tabular form.
+        
+        \begin{table}[H]
+            \centering
+            \setlength\tabcolsep{3 mm}
+            \begin{tabular}{c c c c}
+                % {\textbf{Algorithm}} & {\textbf{MAE}} & {\textbf{MSE}} & {\textbf{R^{2}}} & {\textbf{RMSE}}\\
+                % {Algorithm} & {MAE} & {MSE} & {R^{2}} & {RMSE}\\
+                \toprule
+                Parameters & MAE & MSE & RMSE\\
+                \toprule
+                % \endhead
+                \texttt{order(1, 1, 1)} & 1492.94 & 3223544.63 & 1795.42\\
+                \texttt{order(1, 1, 2)} & 1514.52 & 3393028.97 & 1842.01\\
+                \texttt{order(1, 2, 2)} & 1900.71 & 5475048.05 & 2339.88\\
+                \bottomrule
+            \end{tabular}
+            \caption{Results for ARIMA}
+            \label{tab:my_label}
+        \end{table}
+        
+        \begin{table}[H]
+            \centering
+            \setlength\tabcolsep{3 mm}
+            \begin{tabular}{c c c c}
+                \toprule
+                Parameters & MAE & MSE & RMSE\\
+                \toprule
+                % \endhead
+                \texttt{fit\_intercept = True} & 189.33 & 108074.73 & 328.74\\
+                \texttt{fit\_intercept = False} & 3621.35 & 13230661.88 & 3637.39\\
+                \bottomrule
+            \end{tabular}
+            \caption{Results for Linear Regression}
+            \label{tab:my_label}
+        \end{table}
+        
+        \begin{table}[H]
+            \centering
+            \setlength\tabcolsep{3 mm}
+            \begin{tabular}{c c c c}
+                \toprule
+                Parameters & MAE & MSE & RMSE\\
+                \toprule
+                % \endhead
+                \texttt{kernel = `sigmoid'} & 398.65 & 565297.84 & 751.86\\
+                \texttt{kernel = `rbf'} & 585.98 & 1139148.92 & 1067.30\\
+                \texttt{kernel = `poly'} & 948.92 & 2881658.33 & 1697.54\\
+                \texttt{kernel = `linear'} & 585.98 & 1139148.92 & 1067.30\\
+                \bottomrule
+            \end{tabular}
+            \caption{Results for Support Vector Regressor}
+            \label{tab:my_label}
+        \end{table}
+        
 
-\subsection{Result}
-    something
-
-\subsection{Discussion}
-    something
+    \subsection{Discussion}
+        The discussion delves into the significance of the developed Machine Learning model in the context of India's agricultural landscape. The incorporation of geographic segmentation and seasonal considerations adds depth to the analysis, recognizing the diverse factors influencing crop prices. The success of the model in accurately predicting prices at different granularities underscores its potential for informing decision-making at various levels of the supply chain. Additionally, the discussion explores the implications of identified patterns and trends, shedding light on the broader economic and policy considerations. The model's performance across different regions and the comparative analysis with the ARIMA benchmark provide insights into the efficacy of machine learning approaches for crop price forecasting. Furthermore, the discussion addresses potential extensions or refinements of the model for broader applications and the evolving landscape of agricultural markets. Overall, this project contributes valuable tools and insights for stakeholders navigating the complexities of India's agricultural economy.
